@@ -4,23 +4,52 @@ body {
     width: 100%;
     margin: 0 auto;
     
+    
     header {
       @include block;
       
       hgroup {
-        @include block;
+        width: $minor;
+        float: left;
+        
+        position: fixed;
         
         figure {
           float: left;
           max-width: $minor;
           margin-right: $margin;
+          margin-top: $pad/4;
         }
         
         h1 {
           float: left;
-          max-width: $major;
         }
       }
+    }
+    
+    section {
+      @include block;
+      margin-top: $pad*4;
+      
+      article {
+        @include block;
+        
+        header {
+          @include block;
+          margin: 0;
+        }
+      }
+    }
+    
+    footer {
+      @include block;
+    }
+    
+    
+    header, section, footer {
+      width: 90%;
+      margin-left: $margin;
+      margin-right: $margin;
     }
   }
 }

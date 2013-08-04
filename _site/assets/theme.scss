@@ -2,9 +2,10 @@
 */
 
 
-$color: #000;
-$background: #fff;
+$color: #363636;
+$background: #f1f1f1;
 
+/* OSF TTF colors */
 $red: #990000;
 $blue: #477688;
 $gray: #eee;
@@ -19,11 +20,34 @@ body {
   background: $background;
   
   .container {
-  
+    @include font(normal);
     @include link(normal);
     
-    h1, h2, h3, h4, h5, h6 {
-      @include link(header);
+    header {
+      hgroup {
+        background: #fff;
+        padding: $pad 0;
+        
+        h1 {
+          @include font(ttf);
+          @include link(ttf);
+          padding: 0;
+        }
+      }
+    }
+    
+    section {
+      article {
+        header {
+          h1 {
+            padding-bottom: 0;
+          }
+          
+          h2 {
+            padding-top: 0;
+          }
+        }
+      }
     }
     
   }

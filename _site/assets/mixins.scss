@@ -112,7 +112,7 @@ $breakpoint-big: 1400px !default;
 @mixin link($type : normal) {
   @if $type == "normal" {
     a {
-      color: $red;
+      color: $color;
       text-decoration: none;
       
       &:hover {
@@ -120,7 +120,7 @@ $breakpoint-big: 1400px !default;
       }
     }
   
-  } @else if $type == "header" {
+  } @else if $type == "ttf" {
     a {
       color: $color;
       text-decoration: none;
@@ -129,6 +129,23 @@ $breakpoint-big: 1400px !default;
         color: $red;
       }
     }
+ }   
+}
+
+
+/*
+  Set different font types
+*/
+@mixin font($type : normal) {
+  @if $type == "normal" {
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    
+  } @else if $type == "ttf" {
+    font-family: 'league-gothic', sans-serif;
+    font-weight: normal;
+    text-transform: uppercase;
+    font-size: 2.5em; /* 40px */
  }
     
 }
