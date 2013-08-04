@@ -1,0 +1,22 @@
+/*
+  The stylesheet for printing
+*/
+
+
+
+/* Reset the page, remove page title, page link, page numbers automatically added by browser on printing
+- http://stackoverflow.com/questions/1960939/disabling-browser-print-options-headers-footers-margins-from-page
+- it works only in Chrome 28+
+*/
+
+@page {
+  size: auto;   /* auto is the current printer page size */
+  margin: 0mm;  /* this affects the margin in the printer settings */
+}
+
+body {
+  margin: 0px;  /* the margin on the content before printing */
+}
+
+
+
