@@ -33,10 +33,10 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 */
 /* Site specific mixins
 */
-/* Set different font types
+/* Set different link types
 */
 body { font-size: 100%; line-height: 1.25; }
-body .container { /* Headings -----------------------------------------------
+body .container { font-family: 'Helvetica', 'Arial', sans-serif; /* Headings -----------------------------------------------
 */ /* Headings dont differ by size but by decoration - vertical rhythm is maintained by padding
 */ /* Block level elements
 // -----------------------------------------------
@@ -51,8 +51,7 @@ body .container { /* Headings -----------------------------------------------
 */ /* Reset browser defaults */ /* Text */ /* Button */ /* Cross browser compatible styling: http://www.inserthtml.com/2012/06/custom-form-radio-checkbox/ - the checkbox and radio button is not displayed - instead a label is displayed which can be styled with 'content' 
 */ /* Select box  - put inside a <label class="select"> - label:after is positioned over the original selectbox arrow - additionally padding & relative positioning must be overwritten later in the new context
 */ }
-body .container h1, body .container h2, body .container h3, body .container h4, body .container h5, body .container h6 { font-size: 1.5em; padding: 1.25em 0; margin-top: 0; margin-bottom: 0; }
-body .container h2 { font-weight: 300; }
+body .container h1, body .container h2, body .container h3, body .container h4, body .container h5, body .container h6 { font-size: 1.5em; padding: 1.25em 0; margin-top: 0; margin-bottom: 0; font-family: 'league-gothic', sans-serif; font-weight: normal; text-transform: uppercase; }
 body .container p + p { margin-top: 1.25em; }
 body .container q, body .container blockquote { display: block; margin: 2.5em; border-left: 1px dotted; padding-left: 1.25em; font-style: italic; font-size: larger; }
 body .container address { font-variant: small-caps; }
@@ -91,9 +90,11 @@ body .container header hgroup h1 { float: left; max-width: 61.804%; }
 
 /* The color scheme
 */
-body { color: #363636; background: #f1f1f1; font-family: 'Lato', sans-serif; }
-body .container a, body .container a:active, body .container a:visited { color: #363636; text-decoration: none; }
-body .container header hgroup h1 { font-family: 'league-gothic', sans-serif; font-size: 2.5em; /* 40px */ font-weight: normal; line-height: 1; text-transform: uppercase; }
+body { color: black; background: white; }
+body .container a { color: #990000; text-decoration: none; }
+body .container a:hover { color: black; }
+body .container h1 a, body .container h2 a, body .container h3 a, body .container h4 a, body .container h5 a, body .container h6 a { color: black; text-decoration: none; }
+body .container h1 a:hover, body .container h2 a:hover, body .container h3 a:hover, body .container h4 a:hover, body .container h5 a:hover, body .container h6 a:hover { color: #990000; }
 
 .outline { display: none; }
 

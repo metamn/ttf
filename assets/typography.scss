@@ -3,6 +3,10 @@ body {
   line-height: 1.25;
   
   .container {
+  
+    
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    
     
     /* Headings
      -----------------------------------------------
@@ -18,11 +22,12 @@ body {
       padding: 1.25em 0;
 	    margin-top: 0; 
 	    margin-bottom: 0;
+	    
+	    font-family: 'league-gothic', sans-serif;
+	    font-weight: normal;
+      text-transform: uppercase;
     }
     
-    h2 {
-      font-weight: 300;
-    }
     
 
 

@@ -107,14 +107,30 @@ $breakpoint-big: 1400px !default;
 
 
 /*
-  Set different font types
+  Set different link types
 */
-@mixin font($type) {
-  font-family: 'league-gothic', sans-serif;
-  font-size: 2.5em; /* 40px */
-  font-weight: normal;
-  line-height: 1;
-  text-transform: uppercase;
+@mixin link($type : normal) {
+  @if $type == "normal" {
+    a {
+      color: $red;
+      text-decoration: none;
+      
+      &:hover {
+        color: $color;
+      }
+    }
+  
+  } @else if $type == "header" {
+    a {
+      color: $color;
+      text-decoration: none;
+      
+      &:hover {
+        color: $red;
+      }
+    }
+ }
+    
 }
 
 

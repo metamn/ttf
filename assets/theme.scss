@@ -2,8 +2,14 @@
 */
 
 
-$color: #363636;
-$background: #f1f1f1;
+$color: #000;
+$background: #fff;
+
+$red: #990000;
+$blue: #477688;
+$gray: #eee;
+$yellow: #F9F4D6;
+$lightblue: #E7F2F7;
 
 
 
@@ -12,21 +18,14 @@ body {
   color: $color;
   background: $background;
   
-  font-family: 'Lato', sans-serif;
-  
   .container {
-    a, a:active, a:visited {
-      color: $color;
-      text-decoration: none;
+  
+    @include link(normal);
+    
+    h1, h2, h3, h4, h5, h6 {
+      @include link(header);
     }
     
-    header {
-      hgroup {
-        h1 {
-          @include font(ttf);
-        }
-      }
-    } 
   }
 }
 
