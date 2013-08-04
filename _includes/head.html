@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+  	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <title>{{ page.title | strip_html }}</title> 
+    
+    <!-- Compass with SASS -->
+  	<link href="{{ site.url }}/assets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
+		<link href="{{ site.url }}/assets/print.css" media="print" rel="stylesheet" type="text/css" />
+		<!--[if lt IE 9]>
+			<link href="{{ site.url }}/assets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+		<![endif]-->
+
+		<!--[if lt IE 9]>
+    	<script src="{{ site.url }}/assets/html5shiv.js"></script>
+    <![endif]-->
+    <!--[if (lt IE 9) & (!IEMobile)]>
+    	<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+    <![endif]-->
+    
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,300italic,400italic' rel='stylesheet' type='text/css'>
+    
+     <!-- Picturefill Responsive Images -->
+    <script type="text/javascript" src="{{ site.url }}/assets/matchmedia.js"></script>
+    <script type="text/javascript" src="{{ site.url }}/assets/picturefill.js"></script>
+    
+  </head>
+  
+  <body class="{{ page.title | downcase | replace:' ', '-' }} {{ page.class }}">
+    <div class="container">
+    
+      <header>
+        <h1  class="outline">{{ site.name }}</h1>
+      </header>
