@@ -1,0 +1,32 @@
+
+body {
+  .container {
+    width: 100%;
+    margin: 0 auto;
+    
+    header {
+      @include block;
+      
+      hgroup {
+        @include block;
+        
+        figure {
+          float: left;
+          max-width: $minor;
+          margin-right: $margin;
+        }
+        
+        h1 {
+          float: left;
+          max-width: $major;
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+
