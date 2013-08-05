@@ -45,8 +45,74 @@ body {
           }
         }
         
-        
+        aside {
+          h1 {
+            padding-top: 0;
+            font-size: 300%;
+          }
+          
+          p, ol {
+            font-size: 150%;
+          }
+          
+          ol {
+            margin: $pad*2 $pad;
+            
+            li {
+              margin-bottom: $pad;
+              padding-bottom: 0;
+              border-bottom: 1px solid $gray;
+              cursor: pointer;
+              
+              &:after {
+                width: $pad + $pad/2;
+                height: $pad + $pad/2;
+                border-bottom: 1px solid $gray;
+                background: $gray;
+                display: inline-block;
+                
+                content: "\2192";
+                color: $red;
+                
+                padding-top: $pad/2;
+                padding-left: $pad/2;
+              }
+              
+              ul {
+                display: none;
+                
+                li {
+                  font-size: smaller;
+                  font-style: italic;
+                  cursor: default;
+                  
+                  &:after {
+                    display: none;
+                  }
+                }
+              }
+              
+              
+              &.active {
+                &:after {
+                  content: '\2190';
+                  color: darken($gray, 50%);
+                }
+                
+                ul {
+                  display: block;
+                }
+              }
+            }
+          }
+          
+          
+        }
       }
+    }
+    
+    #footer {
+      display: none;
     }
     
   }

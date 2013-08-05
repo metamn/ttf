@@ -19,6 +19,18 @@ body {
       
       article {
         @include block;
+        
+        header {
+          width: $minor;
+          margin-right: $margin;
+          float: left;
+        }
+        
+        aside {
+          width: $major - $margin;
+          float: left;
+        }
+        
       }
     }
     
