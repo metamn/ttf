@@ -112,11 +112,12 @@ $breakpoint-big: 1400px !default;
 @mixin link($type : normal) {
   @if $type == "normal" {
     a {
-      color: $color;
+      color: $red;
       text-decoration: none;
       
       &:hover {
         color: $color;
+        text-decoration: underline;
       }
     }
   

@@ -16,11 +16,12 @@ $lightblue: #E7F2F7;
 
 
 body {
+  @include font(normal);
+  @include link(normal);
+  
   .container {
-    @include font(normal);
-    @include link(normal);
-    
-    header {
+   
+    #header {
       hgroup {
         padding: $pad 0;
         
@@ -32,17 +33,19 @@ body {
       }
     }
     
-    section {
+    #content {
       article {
         header {
           h1 {
-            padding-bottom: 0;
+            padding: 0;
           }
           
           h2 {
             padding-top: 0;
           }
         }
+        
+        
       }
     }
     

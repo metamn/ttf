@@ -5,7 +5,7 @@ body {
     margin: 0 auto;
     
     
-    header {
+    #header {
       @include block;
       
       hgroup {
@@ -13,26 +13,23 @@ body {
       }
     }
     
-    section {
+    #content {
       @include block;
       margin-top: $pad*4;
       
       article {
         @include block;
-        
-        header {
-          @include block;
-          margin: 0;
-        }
       }
     }
     
-    footer {
+    #footer {
       @include block;
     }
     
     
-    header, section, footer {
+    /* In case of big bacvkground images
+    */
+    #header, #content, #footer {
       width: 90%;
       margin-left: $margin;
       margin-right: $margin;

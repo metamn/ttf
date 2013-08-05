@@ -84,27 +84,27 @@ body .container input[type='checkbox']:checked + label:before { content: '\2611'
 body .container select { border-bottom: 1px solid gray; cursor: pointer; width: 100%; }
 body .container label.select:after { content: '\003E'; float: right; display: inline-block; padding: 0 .45em; position: relative; left: 0; background: white; pointer-events: none; /* this is a must */ cursor: pointer; -webkit-transform: rotate(90deg); -moz-transform: rotate(90deg); -ms-transform: rotate(90deg); -o-transform: rotate(90deg); transform: rotate(90deg); filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1); }
 
-body .container { width: 100%; margin: 0 auto; }
-body .container header { width: 100%; float: left; }
-body .container header hgroup { width: 100%; float: left; }
-body .container section { width: 100%; float: left; margin-top: 5em; }
-body .container section article { width: 100%; float: left; }
-body .container section article header { width: 100%; float: left; margin: 0; }
-body .container footer { width: 100%; float: left; }
-body .container header, body .container section, body .container footer { width: 90%; margin-left: 5%; margin-right: 5%; }
+body .container { width: 100%; margin: 0 auto; /* In case of big bacvkground images
+*/ }
+body .container #header { width: 100%; float: left; }
+body .container #header hgroup { width: 100%; float: left; }
+body .container #content { width: 100%; float: left; margin-top: 5em; }
+body .container #content article { width: 100%; float: left; }
+body .container #footer { width: 100%; float: left; }
+body .container #header, body .container #content, body .container #footer { width: 90%; margin-left: 5%; margin-right: 5%; }
 
 /* The color scheme
 */
 /* OSF TTF colors */
-body .container { font-family: 'Lato', sans-serif; font-weight: 300; }
-body .container a { color: #363636; text-decoration: none; }
-body .container a:hover { color: #363636; }
-body .container header hgroup { padding: 1.25em 0; }
-body .container header hgroup h1 { font-family: 'league-gothic', sans-serif; font-weight: normal; text-transform: uppercase; font-size: 2.5em; /* 40px */ padding: 0; }
-body .container header hgroup h1 a { color: #363636; text-decoration: none; }
-body .container header hgroup h1 a:hover { color: #990000; }
-body .container section article header h1 { padding-bottom: 0; }
-body .container section article header h2 { padding-top: 0; }
+body { font-family: 'Lato', sans-serif; font-weight: 300; }
+body a { color: #990000; text-decoration: none; }
+body a:hover { color: #363636; text-decoration: underline; }
+body .container #header hgroup { padding: 1.25em 0; }
+body .container #header hgroup h1 { font-family: 'league-gothic', sans-serif; font-weight: normal; text-transform: uppercase; font-size: 2.5em; /* 40px */ padding: 0; }
+body .container #header hgroup h1 a { color: #363636; text-decoration: none; }
+body .container #header hgroup h1 a:hover { color: #990000; }
+body .container #content article header h1 { padding: 0; }
+body .container #content article header h2 { padding-top: 0; }
 
 .outline { display: none; }
 
