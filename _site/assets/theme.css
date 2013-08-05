@@ -1,11 +1,11 @@
 /*
 Syntax error: Undefined mixin 'font'.
-        on line 23 of /home/cs/work/ttf/assets/theme.scss, in `font'
-        from line 23 of /home/cs/work/ttf/assets/theme.scss
+        on line 20 of /home/cs/work/ttf/assets/theme.scss, in `font'
+        from line 20 of /home/cs/work/ttf/assets/theme.scss
 
 Backtrace:
-/home/cs/work/ttf/assets/theme.scss:23:in `font'
-/home/cs/work/ttf/assets/theme.scss:23
+/home/cs/work/ttf/assets/theme.scss:20:in `font'
+/home/cs/work/ttf/assets/theme.scss:20
 /var/lib/gems/1.9.1/gems/sass-3.2.9/lib/sass/tree/visitors/perform.rb:253:in `visit_mixin'
 /var/lib/gems/1.9.1/gems/sass-3.2.9/lib/sass/tree/visitors/base.rb:37:in `visit'
 /var/lib/gems/1.9.1/gems/sass-3.2.9/lib/sass/tree/visitors/perform.rb:100:in `visit'
@@ -84,4 +84,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Syntax error: Undefined mixin 'font'.\A         on line 23 of /home/cs/work/ttf/assets/theme.scss, in `font'\A         from line 23 of /home/cs/work/ttf/assets/theme.scss"; }
+  content: "Syntax error: Undefined mixin 'font'.\A         on line 20 of /home/cs/work/ttf/assets/theme.scss, in `font'\A         from line 20 of /home/cs/work/ttf/assets/theme.scss"; }

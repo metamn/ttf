@@ -16,16 +16,12 @@ $lightblue: #E7F2F7;
 
 
 body {
-  color: $color;
-  background: $background;
-  
   .container {
     @include font(normal);
     @include link(normal);
     
     header {
       hgroup {
-        background: #fff;
         padding: $pad 0;
         
         h1 {

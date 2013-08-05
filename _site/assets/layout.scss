@@ -9,21 +9,7 @@ body {
       @include block;
       
       hgroup {
-        width: $minor;
-        float: left;
-        
-        position: fixed;
-        
-        figure {
-          float: left;
-          max-width: $minor;
-          margin-right: $margin;
-          margin-top: $pad/4;
-        }
-        
-        h1 {
-          float: left;
-        }
+        @include block;
       }
     }
     

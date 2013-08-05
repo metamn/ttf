@@ -86,9 +86,7 @@ body .container label.select:after { content: '\003E'; float: right; display: in
 
 body .container { width: 100%; margin: 0 auto; }
 body .container header { width: 100%; float: left; }
-body .container header hgroup { width: 38.196%; float: left; position: fixed; }
-body .container header hgroup figure { float: left; max-width: 38.196%; margin-right: 5%; margin-top: 0.3125em; }
-body .container header hgroup h1 { float: left; }
+body .container header hgroup { width: 100%; float: left; }
 body .container section { width: 100%; float: left; margin-top: 5em; }
 body .container section article { width: 100%; float: left; }
 body .container section article header { width: 100%; float: left; margin: 0; }
@@ -98,11 +96,10 @@ body .container header, body .container section, body .container footer { width:
 /* The color scheme
 */
 /* OSF TTF colors */
-body { color: #363636; background: #f1f1f1; }
 body .container { font-family: 'Lato', sans-serif; font-weight: 300; }
 body .container a { color: #363636; text-decoration: none; }
 body .container a:hover { color: #363636; }
-body .container header hgroup { background: #fff; padding: 1.25em 0; }
+body .container header hgroup { padding: 1.25em 0; }
 body .container header hgroup h1 { font-family: 'league-gothic', sans-serif; font-weight: normal; text-transform: uppercase; font-size: 2.5em; /* 40px */ padding: 0; }
 body .container header hgroup h1 a { color: #363636; text-decoration: none; }
 body .container header hgroup h1 a:hover { color: #990000; }
