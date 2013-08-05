@@ -36,6 +36,20 @@ body {
     
     #footer {
       @include block;
+      position: fixed;
+      bottom: $pad;
+      
+      nav {
+        width: $minor;
+        margin-right: $margin;
+        float: left;
+      }
+      
+      p {
+        width: $major - $margin;
+        float: left;
+        margin-top: $pad*4;
+      }
     }
     
     

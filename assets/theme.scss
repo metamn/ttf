@@ -37,7 +37,8 @@ body {
       article {
         header {
           h1 {
-            padding: 0;
+            padding-bottom: 0;
+            padding-top: $pad*3 - $pad/4;
           }
           
           h2 {
@@ -46,29 +47,38 @@ body {
         }
         
         aside {
+          background: $yellow;
+          padding: $pad*4 0 $pad*15/2;  /* 15 when none <li> is active */ 
+          @include border-radius($pad*30);
+          
+          position: relative;
+          top: -$pad*8;
+          
           h1 {
             padding-top: 0;
             font-size: 300%;
+            
+            span {
+              font-size: 200%;
+            }
           }
-          
-          p, ol {
-            font-size: 150%;
-          }
+         
           
           ol {
+            font-size: 150%;
             margin: $pad*2 $pad;
             
             li {
               margin-bottom: $pad;
               padding-bottom: 0;
-              border-bottom: 1px solid $gray;
+              border-bottom: 1px solid #fff;
               cursor: pointer;
               
               &:after {
                 width: $pad + $pad/2;
                 height: $pad + $pad/2;
-                border-bottom: 1px solid $gray;
-                background: $gray;
+                border-bottom: 1px solid #fff;
+                background: #fff;
                 display: inline-block;
                 
                 content: "\2192";
@@ -83,7 +93,6 @@ body {
                 
                 li {
                   font-size: smaller;
-                  font-style: italic;
                   cursor: default;
                   
                   &:after {
@@ -94,13 +103,20 @@ body {
               
               
               &.active {
+                font-weight: bold;
+                
                 &:after {
                   content: '\2190';
-                  color: darken($gray, 50%);
+                  color: $color;
+                  font-weight: normal;
                 }
                 
                 ul {
                   display: block;
+                  
+                  li {
+                    border-color: $color;
+                  }
                 }
               }
             }
@@ -112,7 +128,7 @@ body {
     }
     
     #footer {
-      display: none;
+     
     }
     
   }

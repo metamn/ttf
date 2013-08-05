@@ -92,7 +92,9 @@ body .container #content { width: 100%; float: left; margin-top: 5em; }
 body .container #content article { width: 100%; float: left; }
 body .container #content article header { width: 38.196%; margin-right: 5%; float: left; }
 body .container #content article aside { width: 56.804%; float: left; }
-body .container #footer { width: 100%; float: left; }
+body .container #footer { width: 100%; float: left; position: fixed; bottom: 1.25em; }
+body .container #footer nav { width: 38.196%; margin-right: 5%; float: left; }
+body .container #footer p { width: 56.804%; float: left; margin-top: 5em; }
 body .container #header, body .container #content, body .container #footer { width: 90%; margin-left: 5%; margin-right: 5%; }
 
 /* The color scheme
@@ -105,19 +107,21 @@ body .container #header hgroup { padding: 1.25em 0; }
 body .container #header hgroup h1 { font-family: 'league-gothic', sans-serif; font-weight: normal; text-transform: uppercase; font-size: 2.5em; /* 40px */ padding: 0; }
 body .container #header hgroup h1 a { color: #363636; text-decoration: none; }
 body .container #header hgroup h1 a:hover { color: #990000; }
-body .container #content article header h1 { padding: 0; }
+body .container #content article header h1 { padding-bottom: 0; padding-top: 3.4375em; }
 body .container #content article header h2 { padding-top: 0; }
+body .container #content article aside { background: #f9f4d6; padding: 5em 0 9.375em; /* 15 when none <li> is active */ -webkit-border-radius: 37.5em; -moz-border-radius: 37.5em; -ms-border-radius: 37.5em; -o-border-radius: 37.5em; border-radius: 37.5em; position: relative; top: -10em; }
 body .container #content article aside h1 { padding-top: 0; font-size: 300%; }
-body .container #content article aside p, body .container #content article aside ol { font-size: 150%; }
-body .container #content article aside ol { margin: 2.5em 1.25em; }
-body .container #content article aside ol li { margin-bottom: 1.25em; padding-bottom: 0; border-bottom: 1px solid #eeeeee; cursor: pointer; }
-body .container #content article aside ol li:after { width: 1.875em; height: 1.875em; border-bottom: 1px solid #eeeeee; background: #eeeeee; display: inline-block; content: "\2192"; color: #990000; padding-top: 0.625em; padding-left: 0.625em; }
+body .container #content article aside h1 span { font-size: 200%; }
+body .container #content article aside ol { font-size: 150%; margin: 2.5em 1.25em; }
+body .container #content article aside ol li { margin-bottom: 1.25em; padding-bottom: 0; border-bottom: 1px solid #fff; cursor: pointer; }
+body .container #content article aside ol li:after { width: 1.875em; height: 1.875em; border-bottom: 1px solid #fff; background: #fff; display: inline-block; content: "\2192"; color: #990000; padding-top: 0.625em; padding-left: 0.625em; }
 body .container #content article aside ol li ul { display: none; }
-body .container #content article aside ol li ul li { font-size: smaller; font-style: italic; cursor: default; }
+body .container #content article aside ol li ul li { font-size: smaller; cursor: default; }
 body .container #content article aside ol li ul li:after { display: none; }
-body .container #content article aside ol li.active:after { content: '\2190'; color: #6e6e6e; }
+body .container #content article aside ol li.active { font-weight: bold; }
+body .container #content article aside ol li.active:after { content: '\2190'; color: #363636; font-weight: normal; }
 body .container #content article aside ol li.active ul { display: block; }
-body .container #footer { display: none; }
+body .container #content article aside ol li.active ul li { border-color: #363636; }
 
 .outline { display: none; }
 
