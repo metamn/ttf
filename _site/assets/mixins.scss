@@ -21,7 +21,7 @@ $breakpoint-a4-height: 1122.51px !default;
 
 
 @mixin a4 {
-  @media all and (min-width : $breakpoint-tablet + 1) and (max-width : $breakpoint-a4-width + 10) {
+  @media all and (orientation : portrait) {
     @content;
   }
 }
