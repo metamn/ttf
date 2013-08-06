@@ -21,4 +21,43 @@ body {
 
 
 
+/* So resizing and hiding ...
+*/
+
+body {
+  .container {
+    #header {
+    }
+    
+    #content {
+      article {
+        aside {
+          padding-bottom: 0;  
+          top: -$pad*2;
+          
+          h1 {
+            font-size: 100%;
+            font-weight: bold;
+            
+            span {
+              font-size: 120%;
+            }
+          }
+          
+          ol {
+            font-size: 110%;
+          }
+        }
+      }
+    }
+    
+    #footer {
+      display: none;
+    }
+  }
+}
+
+
+
+
 

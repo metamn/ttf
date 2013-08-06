@@ -109,7 +109,7 @@ body .container #header hgroup h1 a { color: #363636; text-decoration: none; }
 body .container #header hgroup h1 a:hover { color: #990000; }
 body .container #content article header h1 { padding-bottom: 0; padding-top: 3.4375em; }
 body .container #content article header h2 { padding-top: 0; }
-body .container #content article aside { background: #f9f4d6; padding: 5em 0 9.375em; /* 15 when none <li> is active */ -webkit-border-radius: 37.5em; -moz-border-radius: 37.5em; -ms-border-radius: 37.5em; -o-border-radius: 37.5em; border-radius: 37.5em; position: relative; top: -10em; }
+body .container #content article aside { background: #f9f4d6; padding: 5em 0 22.5em; /* half when one <li> is active */ -webkit-border-radius: 37.5em; -moz-border-radius: 37.5em; -ms-border-radius: 37.5em; -o-border-radius: 37.5em; border-radius: 37.5em; position: relative; top: -10em; }
 body .container #content article aside h1 { padding-top: 0; font-size: 300%; }
 body .container #content article aside h1 span { font-size: 200%; }
 body .container #content article aside ol { font-size: 150%; margin: 2.5em 1.25em; }
@@ -122,6 +122,10 @@ body .container #content article aside ol li.active { font-weight: bold; }
 body .container #content article aside ol li.active:after { content: '\2190'; color: #363636; font-weight: normal; }
 body .container #content article aside ol li.active ul { display: block; }
 body .container #content article aside ol li.active ul li { border-color: #363636; }
+@media all and (min-width: 768px) and (max-width: 803.7px) { body .container #content article aside { padding-bottom: 0; top: -2.5em; }
+  body .container #content article aside h1 { font-size: 100%; font-weight: bold; }
+  body .container #content article aside h1 span { font-size: 120%; }
+  body .container #content article aside ol { font-size: 110%; } }
 
 .outline { display: none; }
 

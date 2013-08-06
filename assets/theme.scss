@@ -48,7 +48,7 @@ body {
         
         aside {
           background: $yellow;
-          padding: $pad*4 0 $pad*15/2;  /* 15 when none <li> is active */ 
+          padding: $pad*4 0 $pad*18; /* half when one <li> is active */ 
           @include border-radius($pad*30);
           
           position: relative;
@@ -119,6 +119,25 @@ body {
                   }
                 }
               }
+            }
+          }
+          
+          
+          @include a4 {
+            padding-bottom: 0;  
+            top: -$pad*2;
+            
+            h1 {
+              font-size: 100%;
+              font-weight: bold;
+              
+              span {
+                font-size: 120%;
+              }
+            }
+            
+            ol {
+              font-size: 110%;
             }
           }
           
