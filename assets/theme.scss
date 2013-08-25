@@ -61,6 +61,21 @@ body {
             span {
               font-size: 200%;
             }
+            
+            a {
+              color: $color;
+            }
+          }
+          
+          h2 {
+            margin-left: $pad*3;
+            padding: 0;
+            
+            &:before {
+              content: '+';
+              font-size: 400%;
+              color: #fff;
+            }
           }
           
           dl {
@@ -95,7 +110,7 @@ body {
               display: none;
               
               ul {
-                margin-left: $pad*3;
+                margin-left: $pad*5;
                 
                 li {
                   border-bottom: 1px solid #fff;

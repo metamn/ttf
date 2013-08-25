@@ -117,10 +117,13 @@ ol { font-size: 150%; margin: $pad*2 $pad;  li { margin-bottom: $pad; padding-bo
 */ }
 body .container #content article aside h1 { padding-top: 0; font-size: 300%; }
 body .container #content article aside h1 span { font-size: 200%; }
+body .container #content article aside h1 a { color: #363636; }
+body .container #content article aside h2 { margin-left: 3.75em; padding: 0; }
+body .container #content article aside h2:before { content: '+'; font-size: 400%; color: #fff; }
 body .container #content article aside dl dt { font-weight: 300; text-transform: none; padding-left: 2.5em; font-size: 150%; margin-bottom: 1.25em; padding-bottom: 0; border-bottom: 1px solid #fff; cursor: pointer; }
 body .container #content article aside dl dt:after { width: 1.875em; height: 1.875em; border-bottom: 1px solid #fff; background: #fff; display: inline-block; content: "\2192"; color: #990000; padding-top: 0.625em; padding-left: 0.625em; margin-left: 0.625em; }
 body .container #content article aside dl dd { display: none; }
-body .container #content article aside dl dd ul { margin-left: 3.75em; }
+body .container #content article aside dl dd ul { margin-left: 6.25em; }
 body .container #content article aside dl dd ul li { border-bottom: 1px solid #fff; padding-bottom: 0.3125em; margin-bottom: 0.3125em; }
 body .container #content article aside dl dd.active { display: block; transition: all 0.5s ease; }
 @media all and (orientation: portrait) { body .container #content article aside { padding-bottom: 17em; top: 2.5em; }
