@@ -62,8 +62,56 @@ body {
               font-size: 200%;
             }
           }
-         
           
+          dl {
+            dt {
+              font-weight: 300;
+              text-transform: none;
+              padding-left: $pad*2;
+              font-size: 150%;
+            
+              margin-bottom: $pad;
+              padding-bottom: 0;
+              border-bottom: 1px solid #fff;
+              cursor: pointer;
+              
+              &:after {
+                width: $pad + $pad/2;
+                height: $pad + $pad/2;
+                border-bottom: 1px solid #fff;
+                background: #fff;
+                display: inline-block;
+                
+                content: "\2192";
+                color: $red;
+                
+                padding-top: $pad/2;
+                padding-left: $pad/2;
+                margin-left: $pad/2;
+              }
+            }
+            
+            dd {
+              display: none;
+              
+              ul {
+                margin-left: $pad*3;
+                
+                li {
+                  border-bottom: 1px solid #fff;
+                  padding-bottom: $pad/4;
+                  margin-bottom: $pad/4;
+                }
+              }
+              
+              &.active {
+                display: block;
+                transition: all 0.5s ease;
+              }
+            }
+          }
+         
+          /*
           ol {
             font-size: 150%;
             margin: $pad*2 $pad;
@@ -121,6 +169,7 @@ body {
               }
             }
           }
+          */
           
           
           @include a4 {
