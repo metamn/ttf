@@ -124,12 +124,17 @@ body {
           
           
           @include a4 {
-            padding-bottom: 0;  
-            top: -$pad*2;
+            padding-bottom: 17em;  
+            top: $pad*2;
             
             h1 {
-              font-size: 100%;
+              font-size: 150%;
               font-weight: bold;
+              
+              width: $major;
+              margin-right: $margin;
+              text-align: right;
+              float: right;
               
               span {
                 font-size: 120%;
@@ -137,7 +142,11 @@ body {
             }
             
             ol {
-              font-size: 110%;
+              @include block;
+              text-align: right;
+              margin-right: $pad*2;
+              
+              font-size: 130%;
             }
           }
           

@@ -92,6 +92,8 @@ body .container #content { width: 100%; float: left; margin-top: 5em; }
 body .container #content article { width: 100%; float: left; }
 body .container #content article header { width: 38.196%; margin-right: 5%; float: left; }
 body .container #content article aside { width: 56.804%; float: left; }
+@media all and (orientation: portrait) { body .container #content article header { width: 61.804%; }
+  body .container #content article aside { width: 100%; float: left; } }
 body .container #footer { width: 100%; float: left; position: fixed; bottom: 1.25em; }
 body .container #footer nav { width: 38.196%; margin-right: 5%; float: left; }
 body .container #footer p { width: 56.804%; float: left; margin-top: 5em; }
@@ -122,10 +124,10 @@ body .container #content article aside ol li.active { font-weight: bold; }
 body .container #content article aside ol li.active:after { content: '\2190'; color: #363636; font-weight: normal; }
 body .container #content article aside ol li.active ul { display: block; }
 body .container #content article aside ol li.active ul li { border-color: #363636; }
-@media all and (orientation: portrait) { body .container #content article aside { padding-bottom: 0; top: -2.5em; }
-  body .container #content article aside h1 { font-size: 100%; font-weight: bold; }
+@media all and (orientation: portrait) { body .container #content article aside { padding-bottom: 17em; top: 2.5em; }
+  body .container #content article aside h1 { font-size: 150%; font-weight: bold; width: 61.804%; margin-right: 5%; text-align: right; float: right; }
   body .container #content article aside h1 span { font-size: 120%; }
-  body .container #content article aside ol { font-size: 110%; } }
+  body .container #content article aside ol { width: 100%; float: left; text-align: right; margin-right: 2.5em; font-size: 130%; } }
 
 .outline { display: none; }
 
