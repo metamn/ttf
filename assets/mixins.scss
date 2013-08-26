@@ -119,25 +119,23 @@ $breakpoint-a4-height: 1122.51px !default;
   Set different link types
 */
 @mixin link($type : normal) {
+  cursor: pointer;
+  
   @if $type == "normal" {
-    a {
-      color: $red;
-      text-decoration: none;
-      
-      &:hover {
-        color: $color;
-        text-decoration: underline;
-      }
+    color: $red;
+    text-decoration: none;
+    
+    &:hover {
+      color: $color;
+      text-decoration: underline;
     }
   
   } @else if $type == "ttf" {
-    a {
-      color: $color;
-      text-decoration: none;
-      
-      &:hover {
-        color: $red;
-      }
+    color: $color;
+    text-decoration: none;
+    
+    &:hover {
+      color: $red;
     }
  }   
 }

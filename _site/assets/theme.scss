@@ -17,7 +17,10 @@ $lightblue: #E7F2F7;
 
 body {
   @include font(normal);
-  @include link(normal);
+  
+  a {
+    @include link;
+  }
   
   .container {
    
@@ -34,193 +37,209 @@ body {
     }
     
     #content {
-      article {
-        header {
-          h1 {
-            padding-bottom: 0;
-            padding-top: $pad*3 - $pad/4;
-          }
-          
-          h2 {
-            padding-top: 0;
-          }
-        }
+      section {
+        article {
         
-        aside {
-          
-          h1 {
-            padding-top: 0;
-            font-size: 300%;
-            
-            span {
-              font-size: 200%;
-            }
-            
-            a {
-              color: $color;
-            }
-          }
-          
           h2 {
-            margin-left: $pad*3;
-            padding: 0;
-            
-            &:before {
-              content: '+';
-              font-size: 400%;
-              color: #fff;
+            span {
+              @include link;
+            }
+          }
+        
+          header {
+            h1 {
+              padding-bottom: 0;
+              padding-top: $pad*3 - $pad/4;
             }
             
-            &:after {
-              content: '\2794';
-              margin-left: $pad/4;
-              color: $red;
+            h2 {
+              padding-top: 0;
             }
           }
           
-          dl {
-            dt {
-              font-weight: 300;
-              text-transform: none;
-              padding-left: $pad*2;
-              font-size: 150%;
-            
-              margin-bottom: $pad;
-              padding-bottom: 0;
-              border-bottom: 1px solid #fff;
-              cursor: pointer;
+          aside {
+            h1 {
+              padding-top: 0;
+              font-size: 300%;
               
-              &:after {
-                width: $pad + $pad/2;
-                height: $pad + $pad/2;
-                border-bottom: 1px solid #fff;
-                background: #fff;
-                display: inline-block;
-                
-                content: "\2192";
-                color: $red;
-                
-                padding-top: $pad/2;
-                padding-left: $pad/2;
-                margin-left: $pad/2;
+              span {
+                font-size: 200%;
+              }
+              
+              a {
+                color: $color;
               }
             }
             
-            dd {
-              display: none;
+            h2 {
+              margin-left: $pad*3;
+              padding: 0;
               
-              ul {
-                margin-left: $pad*5;
-                
-                li {
-                  border-bottom: 1px solid #fff;
-                  padding-bottom: $pad/4;
-                  margin-bottom: $pad/4;
-                }
-              }
+              @include link;
               
-              &.active {
-                display: block;
-                transition: all 0.5s ease;
+              &:before {
+                content: '+';
+                font-size: 400%;
+                color: #fff;
               }
-            }
-          }
-         
-          /*
-          ol {
-            font-size: 150%;
-            margin: $pad*2 $pad;
-            
-            li {
-              margin-bottom: $pad;
-              padding-bottom: 0;
-              border-bottom: 1px solid #fff;
-              cursor: pointer;
               
               &:after {
-                width: $pad + $pad/2;
-                height: $pad + $pad/2;
-                border-bottom: 1px solid #fff;
-                background: #fff;
-                display: inline-block;
-                
-                content: "\2192";
+                content: '\2794';
+                margin-left: $pad/4;
                 color: $red;
-                
-                padding-top: $pad/2;
-                padding-left: $pad/2;
               }
+            }
+            
+            dl {
+              dt {
+                font-weight: 300;
+                text-transform: none;
+                padding-left: $pad*2;
+                font-size: 150%;
               
-              ul {
-                display: none;
-                
-                li {
-                  font-size: smaller;
-                  cursor: default;
-                  
-                  &:after {
-                    display: none;
-                  }
-                }
-              }
-              
-              
-              &.active {
-                font-weight: bold;
+                margin-bottom: $pad;
+                padding-bottom: 0;
+                border-bottom: 1px solid #fff;
+                cursor: pointer;
                 
                 &:after {
-                  content: '\2190';
-                  color: $color;
-                  font-weight: normal;
+                  width: $pad + $pad/2;
+                  height: $pad + $pad/2;
+                  border-bottom: 1px solid #fff;
+                  background: #fff;
+                  display: inline-block;
+                  
+                  content: "\2192";
+                  color: $red;
+                  
+                  padding-top: $pad/2;
+                  padding-left: $pad/2;
+                  margin-left: $pad/2;
+                }
+              }
+              
+              dd {
+                display: none;
+                
+                ul {
+                  margin-left: $pad*5;
+                  
+                  li {
+                    border-bottom: 1px solid #fff;
+                    padding-bottom: $pad/4;
+                    margin-bottom: $pad/4;
+                  }
+                }
+                
+                &.active {
+                  display: block;
+                  transition: all 0.5s ease;
+                }
+              }
+            }
+           
+            /*
+            ol {
+              font-size: 150%;
+              margin: $pad*2 $pad;
+              
+              li {
+                margin-bottom: $pad;
+                padding-bottom: 0;
+                border-bottom: 1px solid #fff;
+                cursor: pointer;
+                
+                &:after {
+                  width: $pad + $pad/2;
+                  height: $pad + $pad/2;
+                  border-bottom: 1px solid #fff;
+                  background: #fff;
+                  display: inline-block;
+                  
+                  content: "\2192";
+                  color: $red;
+                  
+                  padding-top: $pad/2;
+                  padding-left: $pad/2;
                 }
                 
                 ul {
-                  display: block;
+                  display: none;
                   
                   li {
-                    border-color: $color;
+                    font-size: smaller;
+                    cursor: default;
+                    
+                    &:after {
+                      display: none;
+                    }
+                  }
+                }
+                
+                
+                &.active {
+                  font-weight: bold;
+                  
+                  &:after {
+                    content: '\2190';
+                    color: $color;
+                    font-weight: normal;
+                  }
+                  
+                  ul {
+                    display: block;
+                    
+                    li {
+                      border-color: $color;
+                    }
                   }
                 }
               }
             }
-          }
-          */
-          
-          
-          @include a4 {
-            padding-bottom: 17em;  
-            top: $pad*2;
+            */
             
-            h1 {
-              font-size: 150%;
-              font-weight: bold;
+            
+            @include a4 {
+              padding-bottom: 17em;  
+              top: $pad*2;
               
-              width: $major;
-              margin-right: $margin;
-              text-align: right;
-              float: right;
+              h1 {
+                font-size: 150%;
+                font-weight: bold;
+                
+                width: $major;
+                margin-right: $margin;
+                text-align: right;
+                float: right;
+                
+                span {
+                  font-size: 120%;
+                }
+              }
               
-              span {
-                font-size: 120%;
+              ol {
+                @include block;
+                text-align: right;
+                margin-right: $pad*2;
+                
+                font-size: 130%;
               }
             }
             
-            ol {
-              @include block;
-              text-align: right;
-              margin-right: $pad*2;
-              
-              font-size: 130%;
-            }
+            
           }
-          
-          
         }
       }
     }
     
     #footer {
-     
+      nav {
+        ul {
+          li {
+            @include link;
+          }
+        }
+      }
     }
     
   }

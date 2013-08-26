@@ -4,12 +4,22 @@ html, body, .container, #content, #content section {
 }
 
 
+@mixin margin {
+  width: 100% - 2*$margin;
+  margin: 0 $margin;
+}
+
 body {
   .container {
     @include block;
     
     #header {
       @include block;
+      @include margin;
+      
+      position: fixed;
+      top: $pad;
+      z-index: 1;
       
       hgroup {
         @include block;
@@ -27,10 +37,14 @@ body {
         
         article {
           @include block;
+          @include margin;
           
           header {
-            width: $minor;
+            width: $minor - $margin;
+            margin-right: $margin;
             float: left;
+            
+            margin-top: $minor;
           }
           
           aside {
@@ -56,8 +70,11 @@ body {
     
     #footer {
       @include block;
+      @include margin;
+      
       position: fixed;
       bottom: $pad;
+      z-index: 1;
       
       nav {
         width: $minor;
