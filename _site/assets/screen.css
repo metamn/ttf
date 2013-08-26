@@ -110,7 +110,7 @@ body .container #header hgroup { padding: 1.25em 0; }
 body .container #header hgroup h1 { font-family: 'league-gothic', sans-serif; font-weight: normal; text-transform: uppercase; font-size: 2.5em; /* 40px */ cursor: pointer; color: #363636; text-decoration: none; padding: 0; }
 body .container #header hgroup h1:hover { color: #990000; }
 body .container #content section { background-image: url(/assets/background.png); }
-body .container #content section:last-of-type { padding-bottom: 18.75em; /* otherwise navigation is broken on small screens */ }
+body .container #content section:nth-child(2) article aside dd { background: white; border: 1px solid lightgray; position: relative; z-index: 1; }
 body .container #content section article h2 span { cursor: pointer; color: #990000; text-decoration: none; }
 body .container #content section article h2 span:hover { color: #363636; text-decoration: underline; }
 body .container #content section article header h1 { padding-bottom: 0; padding-top: 3.4375em; }

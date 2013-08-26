@@ -40,9 +40,20 @@ body {
       section {
         background-image: url(/assets/background.png);
         
-        &:last-of-type {
-          padding-bottom: $pad*15; /* otherwise navigation is broken on small screens */
+        &:nth-child(2) {
+          article {
+            aside {
+              dd {
+                background: white;
+                border: 1px solid lightgray;
+                position: relative;
+                z-index: 1;
+              }
+            }
+          }
         }
+        
+        
         
         article {
           h2 {
