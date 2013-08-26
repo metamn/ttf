@@ -47,12 +47,6 @@ body {
         }
         
         aside {
-          background: $yellow;
-          padding: $pad*4 0 $pad*18; /* half when one <li> is active */ 
-          @include border-radius($pad*30);
-          
-          position: relative;
-          top: -$pad*8;
           
           h1 {
             padding-top: 0;

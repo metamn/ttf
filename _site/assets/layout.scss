@@ -1,9 +1,12 @@
+/* Set all parents to full height */
+html, body, .container, #content, #content section {
+  height: 100%;
+}
+
 
 body {
   .container {
-    width: 100%;
-    margin: 0 auto;
-    
+    @include block;
     
     #header {
       @include block;
@@ -13,35 +16,43 @@ body {
       }
     }
     
+    /* background-attachment does the trick */
     #content {
-      @include block;
-      margin-top: $pad*4;
-      
-      article {
-        @include block;
+      section {
+        position: relative;
+        background-position: top center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
         
-        header {
-          width: $minor;
-          margin-right: $margin;
-          float: left;
-        }
-        
-        aside {
-          width: $major - $margin;
-          float: left;
-        }
-        
-        @include a4 {
+        article {
+          @include block;
+          
           header {
-            width: $major;
+            width: $minor;
+            float: left;
           }
           
           aside {
-            @include block;
+            width: $major;
+            float: left;
+          }
+          
+          @include a4 {
+            header {
+              width: $major;
+            }
+            
+            aside {
+              @include block;
+            }
           }
         }
+        
       }
     }
+    
+    
     
     #footer {
       @include block;
@@ -62,13 +73,7 @@ body {
     }
     
     
-    /* In case of big bacvkground images
-    */
-    #header, #content, #footer {
-      width: 90%;
-      margin-left: $margin;
-      margin-right: $margin;
-    }
+    
   }
 }
 

@@ -84,20 +84,21 @@ body .container input[type='checkbox']:checked + label:before { content: '\2611'
 body .container select { border-bottom: 1px solid gray; cursor: pointer; width: 100%; }
 body .container label.select:after { content: '\003E'; float: right; display: inline-block; padding: 0 .45em; position: relative; left: 0; background: white; pointer-events: none; /* this is a must */ cursor: pointer; -webkit-transform: rotate(90deg); -moz-transform: rotate(90deg); -ms-transform: rotate(90deg); -o-transform: rotate(90deg); transform: rotate(90deg); filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1); }
 
-body .container { width: 100%; margin: 0 auto; /* In case of big bacvkground images
-*/ }
+/* Set all parents to full height */
+html, body, .container, #content, #content section { height: 100%; }
+
+body .container { width: 100%; float: left; /* background-attachment does the trick */ }
 body .container #header { width: 100%; float: left; }
 body .container #header hgroup { width: 100%; float: left; }
-body .container #content { width: 100%; float: left; margin-top: 5em; }
-body .container #content article { width: 100%; float: left; }
-body .container #content article header { width: 38.196%; margin-right: 5%; float: left; }
-body .container #content article aside { width: 56.804%; float: left; }
-@media all and (orientation: portrait) { body .container #content article header { width: 61.804%; }
-  body .container #content article aside { width: 100%; float: left; } }
+body .container #content section { position: relative; background-position: top center; background-repeat: no-repeat; background-size: cover; background-attachment: fixed; }
+body .container #content section article { width: 100%; float: left; }
+body .container #content section article header { width: 38.196%; float: left; }
+body .container #content section article aside { width: 61.804%; float: left; }
+@media all and (orientation: portrait) { body .container #content section article header { width: 61.804%; }
+  body .container #content section article aside { width: 100%; float: left; } }
 body .container #footer { width: 100%; float: left; position: fixed; bottom: 1.25em; }
-body .container #footer nav { width: 38.196%; margin-right: 5%; float: left; }
-body .container #footer p { width: 56.804%; float: left; margin-top: 5em; }
-body .container #header, body .container #content, body .container #footer { width: 90%; margin-left: 5%; margin-right: 5%; }
+body .container #footer nav { width: 38.196%; margin-right: 19.098%; float: left; }
+body .container #footer p { width: 42.706%; float: left; margin-top: 5em; }
 
 /* The color scheme
 */
@@ -111,7 +112,7 @@ body .container #header hgroup h1 a { color: #363636; text-decoration: none; }
 body .container #header hgroup h1 a:hover { color: #990000; }
 body .container #content article header h1 { padding-bottom: 0; padding-top: 3.4375em; }
 body .container #content article header h2 { padding-top: 0; }
-body .container #content article aside { background: #f9f4d6; padding: 5em 0 22.5em; /* half when one <li> is active */ -webkit-border-radius: 37.5em; -moz-border-radius: 37.5em; -ms-border-radius: 37.5em; -o-border-radius: 37.5em; border-radius: 37.5em; position: relative; top: -10em; /*
+body .container #content article aside { /*
 ol { font-size: 150%; margin: $pad*2 $pad;  li { margin-bottom: $pad; padding-bottom: 0; border-bottom: 1px solid #fff; cursor: pointer;  &:after { width: $pad + $pad/2; height: $pad + $pad/2; border-bottom: 1px solid #fff; background: #fff; display: inline-block;  content: "\2192"; color: $red;  padding-top: $pad/2; padding-left: $pad/2; }  ul { display: none;  li { font-size: smaller; cursor: default;  &:after { display: none; } } }   &.active { font-weight: bold;  &:after { content: '\2190'; color: $color; font-weight: normal; }  ul { display: block;  li { border-color: $color; } } } }
 }
 */ }
@@ -128,7 +129,7 @@ body .container #content article aside dl dd ul { margin-left: 6.25em; }
 body .container #content article aside dl dd ul li { border-bottom: 1px solid #fff; padding-bottom: 0.3125em; margin-bottom: 0.3125em; }
 body .container #content article aside dl dd.active { display: block; transition: all 0.5s ease; }
 @media all and (orientation: portrait) { body .container #content article aside { padding-bottom: 17em; top: 2.5em; }
-  body .container #content article aside h1 { font-size: 150%; font-weight: bold; width: 61.804%; margin-right: 5%; text-align: right; float: right; }
+  body .container #content article aside h1 { font-size: 150%; font-weight: bold; width: 61.804%; margin-right: 19.098%; text-align: right; float: right; }
   body .container #content article aside h1 span { font-size: 120%; }
   body .container #content article aside ol { width: 100%; float: left; text-align: right; margin-right: 2.5em; font-size: 130%; } }
 
