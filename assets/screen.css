@@ -120,6 +120,7 @@ body .container #content article aside h1 span { font-size: 200%; }
 body .container #content article aside h1 a { color: #363636; }
 body .container #content article aside h2 { margin-left: 3.75em; padding: 0; }
 body .container #content article aside h2:before { content: '+'; font-size: 400%; color: #fff; }
+body .container #content article aside h2:after { content: '\2794'; margin-left: 0.3125em; color: #990000; }
 body .container #content article aside dl dt { font-weight: 300; text-transform: none; padding-left: 2.5em; font-size: 150%; margin-bottom: 1.25em; padding-bottom: 0; border-bottom: 1px solid #fff; cursor: pointer; }
 body .container #content article aside dl dt:after { width: 1.875em; height: 1.875em; border-bottom: 1px solid #fff; background: #fff; display: inline-block; content: "\2192"; color: #990000; padding-top: 0.625em; padding-left: 0.625em; margin-left: 0.625em; }
 body .container #content article aside dl dd { display: none; }

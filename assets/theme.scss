@@ -76,6 +76,12 @@ body {
               font-size: 400%;
               color: #fff;
             }
+            
+            &:after {
+              content: '\2794';
+              margin-left: $pad/4;
+              color: $red;
+            }
           }
           
           dl {
