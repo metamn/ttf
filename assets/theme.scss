@@ -125,8 +125,8 @@ body {
               
               dd {
                 display: none;
-                
                 background: white;
+                
                 
                 ul {
                   margin-bottom: $pad;
@@ -177,10 +177,30 @@ body {
           article {
             aside {
               dd {
-                background: white;
                 border: 1px solid lightgray;
-                position: relative;
-                z-index: 1;
+                
+                position: absolute;
+                width: 90%;
+                height: 90%;
+                top: 5%;
+                left: 5%;
+                
+                z-index: 10;
+                
+                span {
+                  cursor: pointer;
+                  
+                  position: fixed;
+                  bottom: $pad*3;
+                  left: 48%;
+                  
+                  &:after {
+                    content: '\2612';
+                    margin-left: $pad/4;
+                    position: relative;
+                    top: 1px;
+                  }
+                }
               }
             }
           }

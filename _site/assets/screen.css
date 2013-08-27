@@ -133,7 +133,9 @@ body .container #content section article aside dl dd ul li { padding: 0.3125em; 
   body .container #content section article aside h1 { font-size: 150%; font-weight: bold; width: 61.804%; margin-right: 5%; text-align: right; float: right; }
   body .container #content section article aside h1 span { font-size: 120%; }
   body .container #content section article aside ol { width: 100%; float: left; text-align: right; margin-right: 2.5em; font-size: 130%; } }
-body .container #content section:nth-child(2) article aside dd { background: white; border: 1px solid lightgray; position: relative; z-index: 1; }
+body .container #content section:nth-child(2) article aside dd { border: 1px solid lightgray; position: absolute; width: 90%; height: 90%; top: 5%; left: 5%; z-index: 10; }
+body .container #content section:nth-child(2) article aside dd span { cursor: pointer; position: fixed; bottom: 3.75em; left: 48%; }
+body .container #content section:nth-child(2) article aside dd span:after { content: '\2612'; margin-left: 0.3125em; position: relative; top: 1px; }
 body .container #content section:nth-child(3) article aside dl dt { font-size: 120%; }
 @media only screen and (min-width: 1401px) { body .container #content section:nth-child(3) article aside dl dt { font-size: 150%; } }
 body .container #footer nav ul li { cursor: pointer; color: #990000; text-decoration: none; }

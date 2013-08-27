@@ -1,11 +1,16 @@
 $(document).ready(function() {
 
-  // Variants, variants slide
+  // Close timeline
+  $('section:nth-child(2) article aside dl dd span').click(function() {
+    $(this).parent().hide('slow');
+  });
+
+  // Toggle dl's
   $('section article aside dl dt').click(function() {
     $(this).nextUntil('dt').slideToggle();
   });
 
-  // Variant, first slide
+  // Scroll to Variant, first slide
   $('section:nth-child(1) article aside h2').click(function() {
     scrollTo($('section:nth-child(2)'));
     
@@ -13,13 +18,14 @@ $(document).ready(function() {
     $('section:nth-child(2) article aside dl dt:nth-child(' + index + ')').next().show();
   });
 
-  // Team, frontpage
+
+  // Scroll to Team, frontpage
   $('section:nth-child(1) article header h2 span').click(function() {
     scrollTo($('section:nth-child(4)'));
   });
   
   
-  // Footer
+  // Scroll in Footer
   $('#footer nav ul li').click(function() {
     var index = $(this).index() + 2;
     var slide = $('section:nth-child(' + index + ')');
