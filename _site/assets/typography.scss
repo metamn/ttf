@@ -12,12 +12,20 @@ body {
      - vertical rhythm is maintained by padding
     */
 
-    h1, h2, h3, h4, h5, h6 {
+    h1, h2 {
 	    font-size: 1.5em;
 	    
       padding: 1.25em 0;
 	    margin-top: 0; 
 	    margin-bottom: 0;
+    }
+    
+    h2 {
+      font-size: 1.25em;
+      
+      @include big-screen {
+        font-size: 1.5em;
+      }
     }
     
     

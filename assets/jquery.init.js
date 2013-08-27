@@ -2,7 +2,7 @@ $(document).ready(function() {
 
   // Variants, variants slide
   $('section article aside dl dt').click(function() {
-    $(this).next().slideToggle();
+    $(this).nextUntil('dt').slideToggle();
   });
 
   // Variant, first slide

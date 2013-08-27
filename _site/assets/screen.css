@@ -53,7 +53,9 @@ body .container { /* Headings -----------------------------------------------
 */ /* Reset browser defaults */ /* Text */ /* Button */ /* Cross browser compatible styling: http://www.inserthtml.com/2012/06/custom-form-radio-checkbox/ - the checkbox and radio button is not displayed - instead a label is displayed which can be styled with 'content' 
 */ /* Select box  - put inside a <label class="select"> - label:after is positioned over the original selectbox arrow - additionally padding & relative positioning must be overwritten later in the new context
 */ }
-body .container h1, body .container h2, body .container h3, body .container h4, body .container h5, body .container h6 { font-size: 1.5em; padding: 1.25em 0; margin-top: 0; margin-bottom: 0; }
+body .container h1, body .container h2 { font-size: 1.5em; padding: 1.25em 0; margin-top: 0; margin-bottom: 0; }
+body .container h2 { font-size: 1.25em; }
+@media only screen and (min-width: 1401px) { body .container h2 { font-size: 1.5em; } }
 body .container p + p { margin-top: 1.25em; }
 body .container q, body .container blockquote { display: block; margin: 2.5em; border-left: 1px dotted; padding-left: 1.25em; font-style: italic; font-size: larger; }
 body .container address { font-variant: small-caps; }
@@ -110,15 +112,10 @@ body .container #header hgroup { padding: 1.25em 0; }
 body .container #header hgroup h1 { font-family: 'league-gothic', sans-serif; font-weight: normal; text-transform: uppercase; font-size: 2.5em; /* 40px */ cursor: pointer; color: #363636; text-decoration: none; padding: 0; }
 body .container #header hgroup h1:hover { color: #990000; }
 body .container #content section { background-image: url(/assets/background.png); }
-body .container #content section:nth-child(2) article aside dd { background: white; border: 1px solid lightgray; position: relative; z-index: 1; }
 body .container #content section article h2 span { cursor: pointer; color: #990000; text-decoration: none; }
 body .container #content section article h2 span:hover { color: #363636; text-decoration: underline; }
 body .container #content section article header h1 { padding-bottom: 0; padding-top: 3.4375em; }
-body .container #content section article header h2 { padding-top: 0; }
-body .container #content section article aside { margin-top: 6.25em; /*
-ol { font-size: 150%; margin: $pad*2 $pad;  li { margin-bottom: $pad; padding-bottom: 0; border-bottom: 1px solid #fff; cursor: pointer;  &:after { width: $pad + $pad/2; height: $pad + $pad/2; border-bottom: 1px solid #fff; background: #fff; display: inline-block;  content: "\2192"; color: $red;  padding-top: $pad/2; padding-left: $pad/2; }  ul { display: none;  li { font-size: smaller; cursor: default;  &:after { display: none; } } }   &.active { font-weight: bold;  &:after { content: '\2190'; color: $color; font-weight: normal; }  ul { display: block;  li { border-color: $color; } } } }
-}
-*/ }
+body .container #content section article aside { margin-top: 6.25em; }
 body .container #content section article aside h1 { padding-top: 0; font-size: 200%; }
 body .container #content section article aside h1 span { font-size: 200%; }
 @media only screen and (min-width: 1401px) { body .container #content section article aside h1 { font-size: 300%; } }
@@ -127,16 +124,18 @@ body .container #content section article aside h2 { margin-left: 3.75em; padding
 body .container #content section article aside h2:hover { color: #363636; text-decoration: underline; }
 body .container #content section article aside h2:before { content: '+'; font-size: 400%; color: #fff; }
 body .container #content section article aside h2:after { content: '\2794'; margin-left: 0.3125em; color: #990000; }
-body .container #content section article aside dl dt { font-weight: 300; text-transform: none; padding-left: 2.5em; font-size: 150%; margin-bottom: 1.25em; padding-bottom: 0; border-bottom: 1px solid #fff; cursor: pointer; }
+body .container #content section article aside dl dt { font-weight: 300; text-transform: none; font-size: 150%; padding: 0; margin: 0; padding-left: 2.5em; margin-bottom: 1.25em; border-bottom: 1px solid #fff; cursor: pointer; }
 body .container #content section article aside dl dt:after { width: 1.875em; height: 1.875em; border-bottom: 1px solid #fff; background: #fff; display: inline-block; content: "\2192"; color: #990000; padding-top: 0.625em; padding-left: 0.625em; margin-left: 0.625em; }
-body .container #content section article aside dl dd { display: none; }
-body .container #content section article aside dl dd ul { margin-left: 6.25em; }
-body .container #content section article aside dl dd ul li { border-bottom: 1px solid #fff; padding-bottom: 0.3125em; margin-bottom: 0.3125em; }
-body .container #content section article aside dl dd.active { display: block; transition: all 0.5s ease; }
+body .container #content section article aside dl dd { display: none; background: white; }
+body .container #content section article aside dl dd ul { margin-bottom: 1.25em; padding: 1.25em 0; }
+body .container #content section article aside dl dd ul li { padding: 0.3125em; border-bottom: 1px dashed dimgrey; }
 @media all and (orientation: portrait) { body .container #content section article aside { padding-bottom: 17em; top: 2.5em; }
   body .container #content section article aside h1 { font-size: 150%; font-weight: bold; width: 61.804%; margin-right: 5%; text-align: right; float: right; }
   body .container #content section article aside h1 span { font-size: 120%; }
   body .container #content section article aside ol { width: 100%; float: left; text-align: right; margin-right: 2.5em; font-size: 130%; } }
+body .container #content section:nth-child(2) article aside dd { background: white; border: 1px solid lightgray; position: relative; z-index: 1; }
+body .container #content section:nth-child(3) article aside dl dt { font-size: 120%; }
+@media only screen and (min-width: 1401px) { body .container #content section:nth-child(3) article aside dl dt { font-size: 150%; } }
 body .container #footer nav ul li { cursor: pointer; color: #990000; text-decoration: none; }
 body .container #footer nav ul li:hover { color: #363636; text-decoration: underline; }
 

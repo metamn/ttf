@@ -40,21 +40,6 @@ body {
       section {
         background-image: url(/assets/background.png);
         
-        &:nth-child(2) {
-          article {
-            aside {
-              dd {
-                background: white;
-                border: 1px solid lightgray;
-                position: relative;
-                z-index: 1;
-              }
-            }
-          }
-        }
-        
-        
-        
         article {
           h2 {
             span {
@@ -68,9 +53,6 @@ body {
               padding-top: $pad*3 - $pad/4;
             }
             
-            h2 {
-              padding-top: 0;
-            }
           }
           
           aside {
@@ -116,11 +98,12 @@ body {
               dt {
                 font-weight: 300;
                 text-transform: none;
-                padding-left: $pad*2;
                 font-size: 150%;
-              
+                
+                padding: 0;
+                margin: 0;
+                padding-left: $pad*2;
                 margin-bottom: $pad;
-                padding-bottom: 0;
                 border-bottom: 1px solid #fff;
                 cursor: pointer;
                 
@@ -143,82 +126,20 @@ body {
               dd {
                 display: none;
                 
+                background: white;
+                
                 ul {
-                  margin-left: $pad*5;
+                  margin-bottom: $pad;
+                  padding: $pad 0;
                   
                   li {
-                    border-bottom: 1px solid #fff;
-                    padding-bottom: $pad/4;
-                    margin-bottom: $pad/4;
+                    padding: $pad/4;
+                    border-bottom: 1px dashed lighten($color, 20%);
                   }
-                }
-                
-                &.active {
-                  display: block;
-                  transition: all 0.5s ease;
                 }
               }
             }
            
-            /*
-            ol {
-              font-size: 150%;
-              margin: $pad*2 $pad;
-              
-              li {
-                margin-bottom: $pad;
-                padding-bottom: 0;
-                border-bottom: 1px solid #fff;
-                cursor: pointer;
-                
-                &:after {
-                  width: $pad + $pad/2;
-                  height: $pad + $pad/2;
-                  border-bottom: 1px solid #fff;
-                  background: #fff;
-                  display: inline-block;
-                  
-                  content: "\2192";
-                  color: $red;
-                  
-                  padding-top: $pad/2;
-                  padding-left: $pad/2;
-                }
-                
-                ul {
-                  display: none;
-                  
-                  li {
-                    font-size: smaller;
-                    cursor: default;
-                    
-                    &:after {
-                      display: none;
-                    }
-                  }
-                }
-                
-                
-                &.active {
-                  font-weight: bold;
-                  
-                  &:after {
-                    content: '\2190';
-                    color: $color;
-                    font-weight: normal;
-                  }
-                  
-                  ul {
-                    display: block;
-                    
-                    li {
-                      border-color: $color;
-                    }
-                  }
-                }
-              }
-            }
-            */
             
             
             @include a4 {
@@ -249,6 +170,35 @@ body {
             }
             
             
+          }
+        }
+        
+        &:nth-child(2) {
+          article {
+            aside {
+              dd {
+                background: white;
+                border: 1px solid lightgray;
+                position: relative;
+                z-index: 1;
+              }
+            }
+          }
+        }
+        
+        &:nth-child(3) {
+          article {
+            aside {
+              dl {
+                dt {
+                  font-size: 120%;
+                  
+                  @include big-screen {
+                    font-size: 150%;
+                  }
+                }
+              }
+            }
           }
         }
       }
