@@ -124,13 +124,14 @@ body .container #content section article aside h1 span { font-size: 200%; }
 body .container #content section article aside h1 a { color: #363636; }
 body .container #content section article aside p { font-size: large; max-width: 600px; line-height: 1.75; margin-left: 6em; }
 body .container #content section article aside p:first-line { font-weight: 400; }
+body .container #content section article aside dl + p { margin-top: 3.75em; text-align: right; font-weight: 400; }
 body .container #content section article aside figure { background: #fff; border: 1px solid lightgray; }
 body .container #content section article aside dl dt { font-weight: 300; text-transform: none; font-size: 150%; padding: 0; margin: 0; padding-left: 2.5em; margin-bottom: 1.25em; border-bottom: 1px solid #fff; cursor: pointer; }
 body .container #content section article aside dl dt:after { display: inline-block; content: "\2192"; color: #990000; padding: 0 0.3125em; cursor: pointer; }
-body .container #content section article aside dl dd { display: none; background: white; border: 1px solid lightgray; -webkit-border-radius: 0.625em; -moz-border-radius: 0.625em; -ms-border-radius: 0.625em; -o-border-radius: 0.625em; border-radius: 0.625em; position: absolute; width: 70%; height: 70%; top: 15%; left: 15%; z-index: 10; }
+body .container #content section article aside dl dd { display: none; background: white; border: 1px solid lightgray; -webkit-border-radius: 0.625em; -moz-border-radius: 0.625em; -ms-border-radius: 0.625em; -o-border-radius: 0.625em; border-radius: 0.625em; position: absolute; width: 70%; height: 90%; top: 5%; left: 15%; z-index: 10; }
 body .container #content section article aside dl dd div { padding: 5%; }
 body .container #content section article aside dl dd div ul { font-size: large; line-height: 1.75; }
-body .container #content section article aside dl dd span { cursor: pointer; position: fixed; top: 17%; right: 17%; }
+body .container #content section article aside dl dd span { cursor: pointer; position: fixed; top: 7%; right: 17%; }
 body .container #content section article aside dl dd span:after { content: '\2612'; margin-left: 0.3125em; position: relative; top: 1px; }
 @media all and (orientation: portrait) { body .container #content section article aside { padding-bottom: 17em; top: 2.5em; }
   body .container #content section article aside h1 { font-size: 150%; font-weight: bold; width: 61.804%; margin-right: 5%; text-align: right; float: right; }
