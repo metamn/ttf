@@ -96,8 +96,6 @@ body .container #content section { position: relative; background-position: top 
 body .container #content section article { width: 100%; float: left; width: 90%; margin: 0 5%; }
 body .container #content section article header { width: 33.196%; margin-right: 5%; float: left; margin-top: 19.098%; }
 body .container #content section article aside { width: 61.804%; float: left; }
-@media all and (orientation: portrait) { body .container #content section article header { width: 61.804%; }
-  body .container #content section article aside { width: 100%; float: left; } }
 body .container #footer { width: 100%; float: left; width: 90%; margin: 0 5%; position: fixed; bottom: 1.25em; z-index: 1; }
 body .container #footer nav { width: 38.196%; margin-right: 5%; float: left; }
 body .container #footer p { width: 56.804%; float: left; margin-top: 5em; }
@@ -111,7 +109,7 @@ body a:hover { color: #363636; text-decoration: underline; }
 body .container #header hgroup { padding: 1.25em 0; }
 body .container #header hgroup h1 { font-family: 'league-gothic', sans-serif; font-weight: normal; text-transform: uppercase; font-size: 2.5em; /* 40px */ cursor: pointer; color: #363636; text-decoration: none; padding: 0; }
 body .container #header hgroup h1:hover { color: #990000; }
-body .container #content section { background-image: url(http://metamn.github.io/ttf/assets/background.png); }
+body .container #content section { background-image: url(/assets/background.png); }
 body .container #content section article h2 span { cursor: pointer; color: #990000; text-decoration: none; }
 body .container #content section article h2 span:hover { color: #363636; text-decoration: underline; }
 body .container #content section article header h1 { padding-bottom: 0; padding-top: 3.4375em; }
@@ -121,11 +119,11 @@ body .container #content section article aside { margin-top: 6.25em; }
 body .container #content section article aside h1 { padding-top: 0; font-size: 200%; }
 body .container #content section article aside h1 span { font-size: 200%; }
 @media only screen and (min-width: 1401px) { body .container #content section article aside h1 { font-size: 300%; } }
-body .container #content section article aside h1 a { color: #363636; }
-body .container #content section article aside p { font-size: large; max-width: 600px; line-height: 1.75; margin-left: 6em; }
+body .container #content section article aside p { font-size: large; max-width: 600px; line-height: 1.75; margin-left: 6em; float: left; }
 body .container #content section article aside p:first-line { font-weight: 400; }
 body .container #content section article aside dl + p { margin-top: 3.75em; text-align: right; font-weight: 400; }
 body .container #content section article aside figure { background: #fff; border: 1px solid lightgray; }
+@media all and (orientation: portrait) { body .container #content section article aside figure { position: absolute; top: 50%; width: 85%; left: 5%; } }
 body .container #content section article aside dl dt { font-weight: 300; text-transform: none; font-size: 150%; padding: 0; margin: 0; padding-left: 2.5em; margin-bottom: 1.25em; border-bottom: 1px solid #fff; cursor: pointer; }
 body .container #content section article aside dl dt:after { display: inline-block; content: "\2192"; color: #990000; padding: 0 0.3125em; cursor: pointer; }
 body .container #content section article aside dl dd { display: none; background: white; border: 1px solid lightgray; -webkit-border-radius: 0.625em; -moz-border-radius: 0.625em; -ms-border-radius: 0.625em; -o-border-radius: 0.625em; border-radius: 0.625em; position: absolute; width: 70%; height: 90%; top: 5%; left: 15%; z-index: 10; }
@@ -133,13 +131,11 @@ body .container #content section article aside dl dd div { padding: 5%; }
 body .container #content section article aside dl dd div ul { font-size: large; line-height: 1.75; }
 body .container #content section article aside dl dd span { cursor: pointer; position: fixed; top: 7%; right: 17%; }
 body .container #content section article aside dl dd span:after { content: '\2612'; margin-left: 0.3125em; position: relative; top: 1px; }
-@media all and (orientation: portrait) { body .container #content section article aside { padding-bottom: 17em; top: 2.5em; }
-  body .container #content section article aside h1 { font-size: 150%; font-weight: bold; width: 61.804%; margin-right: 5%; text-align: right; float: right; }
-  body .container #content section article aside h1 span { font-size: 120%; }
-  body .container #content section article aside ol { width: 100%; float: left; text-align: right; margin-right: 2.5em; font-size: 130%; } }
 body .container #content section:nth-child(2) article aside p:after { display: inline-block; content: "\2192"; color: #990000; padding: 0 0.3125em; cursor: pointer; }
+@media all and (orientation: portrait) { body .container #content section:nth-child(3) article aside h1, body .container #content section:nth-child(4) article aside h1, body .container #content section:nth-child(5) article aside h1 { position: absolute; top: 3.75em; left: 50%; } }
 body .container #footer nav ul li { cursor: pointer; color: #990000; text-decoration: none; }
 body .container #footer nav ul li:hover { color: #363636; text-decoration: underline; }
+@media all and (orientation: portrait) { body .container #footer { display: none; } }
 
 .outline { display: none; }
 

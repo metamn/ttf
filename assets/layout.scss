@@ -51,16 +51,6 @@ body {
             width: $major;
             float: left;
           }
-          
-          @include a4 {
-            header {
-              width: $major;
-            }
-            
-            aside {
-              @include block;
-            }
-          }
         }
         
       }

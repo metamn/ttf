@@ -50,7 +50,7 @@ body {
     
     #content {
       section {
-        background-image: url(http://metamn.github.io/ttf/assets/background.png);
+        background-image: url(/assets/background.png);
         
         article {
           h2 {
@@ -87,10 +87,6 @@ body {
               @include big-screen {
                 font-size: 300%;
               }
-              
-              a {
-                color: $color;
-              }
             }
             
             p {
@@ -98,6 +94,7 @@ body {
               max-width: 600px;
               line-height: 1.75;
               margin-left: 6em;
+              float: left;
               
               &:first-line {
                 font-weight: 400;
@@ -113,6 +110,13 @@ body {
             figure {
               background: #fff;
               border: 1px solid lightgray;
+              
+              @include a4 {
+                position: absolute;
+                top: 50%;
+                width: 85%;
+                left: 5%;
+              }
             }
             
             dl {
@@ -172,35 +176,6 @@ body {
                 }
               }
             }
-           
-            
-            
-            @include a4 {
-              padding-bottom: 17em;  
-              top: $pad*2;
-              
-              h1 {
-                font-size: 150%;
-                font-weight: bold;
-                
-                width: $major;
-                margin-right: $margin;
-                text-align: right;
-                float: right;
-                
-                span {
-                  font-size: 120%;
-                }
-              }
-              
-              ol {
-                @include block;
-                text-align: right;
-                margin-right: $pad*2;
-                
-                font-size: 130%;
-              }
-            }
             
             
           }
@@ -219,6 +194,22 @@ body {
           }
         }
         
+        &:nth-child(3), &:nth-child(4), &:nth-child(5) {
+          article {
+            aside {
+              h1 {
+                @include a4 {
+                  position: absolute;
+                  top: $pad*3;
+                  left: 50%;
+                }
+              }
+            }
+          }
+          
+        }
+              
+              
         
       }
     }
@@ -231,10 +222,47 @@ body {
           }
         }
       }
+      
+      @include a4 {
+        display: none;
+      }
     }
     
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
   
