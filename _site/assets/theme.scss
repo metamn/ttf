@@ -38,7 +38,7 @@ body {
     
     #content {
       section {
-        background-image: url(http://metamn.github.io/ttf/assets/background.png);
+        background-image: url(/assets/background.png);
         
         article {
           h2 {
@@ -75,23 +75,11 @@ body {
               }
             }
             
-            h2 {
-              margin-left: $pad*3;
-              padding: 0;
-              
-              @include link;
-              
-              &:before {
-                content: '+';
-                font-size: 400%;
-                color: #fff;
-              }
-              
-              &:after {
-                content: '\2794';
-                margin-left: $pad/4;
-                color: $red;
-              }
+            p {
+              font-size: large;
+              max-width: 600px;
+              line-height: 1.75;
+              margin-left: 6em;
             }
             
             dl {
@@ -191,8 +179,8 @@ body {
                   cursor: pointer;
                   
                   position: fixed;
-                  bottom: $pad*3;
-                  left: 48%;
+                  top: 7%;
+                  right: 7%;
                   
                   &:after {
                     content: '\2612';
