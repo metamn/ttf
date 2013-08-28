@@ -3,7 +3,7 @@
 
 
 $color: #363636;
-$background: #f1f1f1;
+$background: #f9f9f9;
 
 /* OSF TTF colors */
 $red: #990000;
@@ -14,9 +14,21 @@ $lightblue: #E7F2F7;
 
 
 
+@mixin arrow {  
+  display: inline-block;
+  content: "\2192";
+  color: $red;
+  
+  padding: 0 $pad/4;
+  cursor: pointer;
+}
+
+
 
 body {
   @include font(normal);
+  color: $color;
+  background: $background;
   
   a {
     @include link;
@@ -38,7 +50,7 @@ body {
     
     #content {
       section {
-        background-image: url(http://metamn.github.io/ttf/assets/background.png);
+        background-image: url(/assets/background.png);
         
         article {
           h2 {
@@ -51,6 +63,12 @@ body {
             h1 {
               padding-bottom: 0;
               padding-top: $pad*3 - $pad/4;
+            }
+            
+            ol {
+              li {
+                @include link;
+              }
             }
             
           }
@@ -75,23 +93,26 @@ body {
               }
             }
             
-            h2 {
-              margin-left: $pad*3;
-              padding: 0;
+            p {
+              font-size: large;
+              max-width: 600px;
+              line-height: 1.75;
+              margin-left: 6em;
               
-              @include link;
-              
-              &:before {
-                content: '+';
-                font-size: 400%;
-                color: #fff;
+              &:first-line {
+                font-weight: 400;
               }
-              
-              &:after {
-                content: '\2794';
-                margin-left: $pad/4;
-                color: $red;
-              }
+            }
+            
+            dl + p {
+              margin-top: $pad*3;
+              text-align: right;
+              font-weight: 400;
+            }
+                        
+            figure {
+              background: #fff;
+              border: 1px solid lightgray;
             }
             
             dl {
@@ -108,33 +129,45 @@ body {
                 cursor: pointer;
                 
                 &:after {
-                  width: $pad + $pad/2;
-                  height: $pad + $pad/2;
-                  border-bottom: 1px solid #fff;
-                  background: #fff;
-                  display: inline-block;
-                  
-                  content: "\2192";
-                  color: $red;
-                  
-                  padding-top: $pad/2;
-                  padding-left: $pad/2;
-                  margin-left: $pad/2;
+                  @include arrow;
                 }
               }
               
               dd {
                 display: none;
                 background: white;
+                border: 1px solid lightgray;
+                @include border-radius($pad/2);
                 
+                position: absolute;
+                width: 70%;
+                height: 90%;
+                top: 5%;
+                left: 15%;
                 
-                ul {
-                  margin-bottom: $pad;
-                  padding: $pad 0;
+                z-index: 10;
+                
+                div {
+                  padding: 5%;
                   
-                  li {
-                    padding: $pad/4;
-                    border-bottom: 1px dashed lighten($color, 20%);
+                  ul {
+                    font-size: large;
+                    line-height: 1.75;
+                  }
+                }
+                
+                span {
+                  cursor: pointer;
+                  
+                  position: fixed;
+                  top: 7%;
+                  right: 17%;
+                  
+                  &:after {
+                    content: '\2612';
+                    margin-left: $pad/4;
+                    position: relative;
+                    top: 1px;
                   }
                 }
               }
@@ -176,51 +209,17 @@ body {
         &:nth-child(2) {
           article {
             aside {
-              dd {
-                border: 1px solid lightgray;
-                
-                position: absolute;
-                width: 90%;
-                height: 90%;
-                top: 5%;
-                left: 5%;
-                
-                z-index: 10;
-                
-                span {
-                  cursor: pointer;
-                  
-                  position: fixed;
-                  bottom: $pad*3;
-                  left: 48%;
-                  
-                  &:after {
-                    content: '\2612';
-                    margin-left: $pad/4;
-                    position: relative;
-                    top: 1px;
-                  }
+              p {
+                &:after {
+                  @include arrow;
                 }
               }
+              
             }
           }
         }
         
-        &:nth-child(3) {
-          article {
-            aside {
-              dl {
-                dt {
-                  font-size: 120%;
-                  
-                  @include big-screen {
-                    font-size: 150%;
-                  }
-                }
-              }
-            }
-          }
-        }
+        
       }
     }
     
