@@ -14,6 +14,16 @@ $lightblue: #E7F2F7;
 
 
 
+@mixin arrow {  
+  display: inline-block;
+  content: "\2192";
+  color: $red;
+  
+  padding: 0 $pad/4;
+  cursor: pointer;
+}
+
+
 
 body {
   @include font(normal);
@@ -53,6 +63,12 @@ body {
               padding-top: $pad*3 - $pad/4;
             }
             
+            ol {
+              li {
+                @include link;
+              }
+            }
+            
           }
           
           aside {
@@ -80,6 +96,15 @@ body {
               max-width: 600px;
               line-height: 1.75;
               margin-left: 6em;
+              
+              &:first-line {
+                font-weight: 400;
+              }
+            }
+            
+            figure {
+              background: #fff;
+              border: 1px solid lightgray;
             }
             
             dl {
@@ -96,18 +121,7 @@ body {
                 cursor: pointer;
                 
                 &:after {
-                  width: $pad + $pad/2;
-                  height: $pad + $pad/2;
-                  border-bottom: 1px solid #fff;
-                  background: #fff;
-                  display: inline-block;
-                  
-                  content: "\2192";
-                  color: $red;
-                  
-                  padding-top: $pad/2;
-                  padding-left: $pad/2;
-                  margin-left: $pad/2;
+                  @include arrow;
                 }
               }
               
@@ -164,6 +178,12 @@ body {
         &:nth-child(2) {
           article {
             aside {
+              p {
+                &:after {
+                  @include arrow;
+                }
+              }
+              
               dd {
                 border: 1px solid lightgray;
                 
