@@ -3,7 +3,7 @@
 
 
 $color: #363636;
-$background: #f1f1f1;
+$background: #f9f9f9;
 
 /* OSF TTF colors */
 $red: #990000;
@@ -27,6 +27,8 @@ $lightblue: #E7F2F7;
 
 body {
   @include font(normal);
+  color: $color;
+  background: $background;
   
   a {
     @include link;
@@ -128,15 +130,38 @@ body {
               dd {
                 display: none;
                 background: white;
+                border: 1px solid lightgray;
+                @include border-radius($pad/2);
                 
+                position: absolute;
+                width: 70%;
+                height: 70%;
+                top: 15%;
+                left: 15%;
                 
-                ul {
-                  margin-bottom: $pad;
-                  padding: $pad 0;
+                z-index: 10;
+                
+                div {
+                  padding: 5%;
                   
-                  li {
-                    padding: $pad/4;
-                    border-bottom: 1px dashed lighten($color, 20%);
+                  ul {
+                    font-size: large;
+                    line-height: 1.75;
+                  }
+                }
+                
+                span {
+                  cursor: pointer;
+                  
+                  position: fixed;
+                  top: 17%;
+                  right: 17%;
+                  
+                  &:after {
+                    content: '\2612';
+                    margin-left: $pad/4;
+                    position: relative;
+                    top: 1px;
                   }
                 }
               }
@@ -184,51 +209,11 @@ body {
                 }
               }
               
-              dd {
-                border: 1px solid lightgray;
-                
-                position: absolute;
-                width: 90%;
-                height: 90%;
-                top: 5%;
-                left: 5%;
-                
-                z-index: 10;
-                
-                span {
-                  cursor: pointer;
-                  
-                  position: fixed;
-                  top: 7%;
-                  right: 7%;
-                  
-                  &:after {
-                    content: '\2612';
-                    margin-left: $pad/4;
-                    position: relative;
-                    top: 1px;
-                  }
-                }
-              }
             }
           }
         }
         
-        &:nth-child(3) {
-          article {
-            aside {
-              dl {
-                dt {
-                  font-size: 120%;
-                  
-                  @include big-screen {
-                    font-size: 150%;
-                  }
-                }
-              }
-            }
-          }
-        }
+        
       }
     }
     

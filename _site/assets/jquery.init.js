@@ -4,7 +4,12 @@ $(document).ready(function() {
 
   // Toggle dl's
   $('section article aside dl dt').click(function() {
-    $(this).nextUntil('dt').slideToggle();
+    $(this).next('dd').slideToggle();
+  });
+  
+  // Close dl's
+  $('section article aside dl dd span').click(function() {
+    $(this).parent().slideToggle();
   });
 
   
