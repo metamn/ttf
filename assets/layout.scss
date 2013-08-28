@@ -24,6 +24,10 @@ body {
       hgroup {
         @include block;
       }
+      
+      @include mobile {
+        position: relative;
+      }
     }
     
     /* background-attachment does the trick */
@@ -50,6 +54,17 @@ body {
           aside {
             width: $major;
             float: left;
+          }
+          
+          @include mobile {
+            position: relative;
+            z-index: 5;
+            
+            header, aside {
+              @include block;
+              margin: 0;
+              
+            }
           }
         }
         
