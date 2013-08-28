@@ -92,12 +92,12 @@ html, body, .container, #content, #content section { height: 100%; }
 body .container { width: 100%; float: left; /* background-attachment does the trick */ }
 body .container #header { width: 100%; float: left; width: 90%; margin: 0 5%; position: fixed; top: 1.25em; z-index: 1; }
 body .container #header hgroup { width: 100%; float: left; }
-@media (max-width: 380px) { body .container #header { position: relative; } }
+@media only screen and (max-width: 767px) { body .container #header { position: relative; } }
 body .container #content section { position: relative; background-position: top center; background-repeat: no-repeat; background-size: cover; background-attachment: fixed; }
 body .container #content section article { width: 100%; float: left; width: 90%; margin: 0 5%; }
 body .container #content section article header { width: 33.196%; margin-right: 5%; float: left; margin-top: 19.098%; }
 body .container #content section article aside { width: 61.804%; float: left; }
-@media (max-width: 380px) { body .container #content section article { position: relative; z-index: 5; }
+@media only screen and (max-width: 767px) { body .container #content section article { position: relative; z-index: 5; }
   body .container #content section article header, body .container #content section article aside { width: 100%; float: left; margin: 0; } }
 body .container #footer { width: 100%; float: left; width: 90%; margin: 0 5%; position: fixed; bottom: 1.25em; z-index: 1; }
 body .container #footer nav { width: 38.196%; margin-right: 5%; float: left; }
@@ -116,39 +116,40 @@ body .container #content section { background-image: url(/assets/background.png)
 body .container #content section article h2 span { cursor: pointer; color: #990000; text-decoration: none; }
 body .container #content section article h2 span:hover { color: #363636; text-decoration: underline; }
 body .container #content section article header h1 { padding-bottom: 0; padding-top: 3.4375em; }
-@media (max-width: 380px) { body .container #content section article header h1 { padding: 1.25em 0; margin: 2.5em 0; border-top: 1px solid; border-bottom: 1px solid; } }
+@media only screen and (max-width: 767px) { body .container #content section article header h1 { padding: 1.25em 0; margin: 2.5em 0; border-top: 1px solid; border-bottom: 1px solid; } }
 body .container #content section article header ol li { cursor: pointer; color: #990000; text-decoration: none; }
 body .container #content section article header ol li:hover { color: #363636; text-decoration: underline; }
 body .container #content section article aside { margin-top: 6.25em; }
-@media (max-width: 380px) { body .container #content section article aside { margin-top: 0; } }
+@media only screen and (max-width: 767px) { body .container #content section article aside { margin-top: 0; } }
 body .container #content section article aside h1 { padding-top: 0; font-size: 200%; }
 body .container #content section article aside h1 span { font-size: 200%; }
 @media only screen and (min-width: 1401px) { body .container #content section article aside h1 { font-size: 300%; } }
 body .container #content section article aside p { font-size: large; max-width: 600px; line-height: 1.75; margin-left: 6em; float: left; }
 body .container #content section article aside p:first-line { font-weight: 400; }
-@media (max-width: 380px) { body .container #content section article aside p { margin-left: 0; } }
+@media only screen and (max-width: 767px) { body .container #content section article aside p { margin-left: 0; } }
 body .container #content section article aside dl + p { margin-top: 3.75em; text-align: right; font-weight: 400; }
 body .container #content section article aside dl dt { font-weight: 300; text-transform: none; font-size: 150%; padding: 0; margin: 0; padding-left: 2.5em; margin-bottom: 1.25em; border-bottom: 1px solid #fff; cursor: pointer; }
 body .container #content section article aside dl dt:after { display: inline-block; content: "\2192"; color: #990000; padding: 0 0.3125em; cursor: pointer; }
-@media (max-width: 380px) { body .container #content section article aside dl dt { padding-left: 0; } }
+@media only screen and (max-width: 767px) { body .container #content section article aside dl dt { padding-left: 0; } }
 body .container #content section article aside dl dd { display: none; background: white; border: 1px solid lightgray; -webkit-border-radius: 0.625em; -moz-border-radius: 0.625em; -ms-border-radius: 0.625em; -o-border-radius: 0.625em; border-radius: 0.625em; position: absolute; width: 70%; height: 90%; top: 5%; left: 15%; z-index: 10; }
 body .container #content section article aside dl dd div { padding: 5%; }
 body .container #content section article aside dl dd div ul { font-size: large; line-height: 1.75; }
 body .container #content section article aside dl dd span { cursor: pointer; position: fixed; top: 7%; right: 17%; }
 body .container #content section article aside dl dd span:after { content: '\2612'; margin-left: 0.3125em; position: relative; top: 1px; }
-@media (max-width: 380px) { body .container #content section article aside dl dd { position: relative; width: 100%; height: auto; top: 0; left: 0%; float: left; border: none; margin-bottom: 2.5em; }
+@media only screen and (max-width: 767px) { body .container #content section article aside dl dd { position: relative; width: 100%; height: auto; top: 0; left: 0%; float: left; border: none; margin-bottom: 2.5em; }
   body .container #content section article aside dl dd div h1 { display: none; }
   body .container #content section article aside dl dd span { display: none; } }
 body .container #content section:nth-child(2) article aside p:after { display: inline-block; content: "\2192"; color: #990000; padding: 0 0.3125em; cursor: pointer; }
-@media (max-width: 380px) { body .container #content section:nth-child(3) article header, body .container #content section:nth-child(4) article header, body .container #content section:nth-child(5) article header { display: none; } }
+@media only screen and (max-width: 767px) { body .container #content section:nth-child(3) article header, body .container #content section:nth-child(4) article header, body .container #content section:nth-child(5) article header { display: none; } }
 @media all and (orientation: portrait) { body .container #content section:nth-child(3) article aside h1, body .container #content section:nth-child(4) article aside h1, body .container #content section:nth-child(5) article aside h1 { position: absolute; top: 3.75em; left: 50%; } }
-@media (max-width: 380px) { body .container #content section:nth-child(3) article aside h1, body .container #content section:nth-child(4) article aside h1, body .container #content section:nth-child(5) article aside h1 { width: 100%; float: left; position: relative; top: 0; left: 0; margin-top: 2.5em; } }
+@media only screen and (max-width: 767px) { body .container #content section:nth-child(3) article aside h1, body .container #content section:nth-child(4) article aside h1, body .container #content section:nth-child(5) article aside h1 { width: 100%; float: left; position: relative; top: 0; left: 0; margin-top: 2.5em; } }
 body .container #content section:nth-child(3) article aside figure, body .container #content section:nth-child(4) article aside figure, body .container #content section:nth-child(5) article aside figure { background: #fff; border: 1px solid lightgray; }
 @media all and (orientation: portrait) { body .container #content section:nth-child(3) article aside figure, body .container #content section:nth-child(4) article aside figure, body .container #content section:nth-child(5) article aside figure { position: absolute; top: 50%; width: 85%; left: 5%; } }
-@media (max-width: 380px) { body .container #content section:nth-child(3) article aside figure, body .container #content section:nth-child(4) article aside figure, body .container #content section:nth-child(5) article aside figure { position: relative; top: 0; float: left; width: 98%; left: 1%; } }
+@media only screen and (max-width: 767px) { body .container #content section:nth-child(3) article aside figure, body .container #content section:nth-child(4) article aside figure, body .container #content section:nth-child(5) article aside figure { position: relative; top: 0; float: left; width: 98%; left: 1%; } }
 body .container #footer nav ul li { cursor: pointer; color: #990000; text-decoration: none; }
 body .container #footer nav ul li:hover { color: #363636; text-decoration: underline; }
 @media all and (orientation: portrait) { body .container #footer { display: none; } }
+@media only screen and (max-width: 767px) { body .container #footer { display: none; } }
 
 .outline { display: none; }
 

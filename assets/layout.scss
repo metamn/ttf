@@ -25,7 +25,7 @@ body {
         @include block;
       }
       
-      @include mobile {
+      @include tablet-and-below {
         position: relative;
       }
     }
@@ -56,7 +56,7 @@ body {
             float: left;
           }
           
-          @include mobile {
+          @include tablet-and-below {
             position: relative;
             z-index: 5;
             

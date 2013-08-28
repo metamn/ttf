@@ -64,7 +64,7 @@ body {
               padding-bottom: 0;
               padding-top: $pad*3 - $pad/4;
               
-              @include mobile {
+              @include tablet-and-below {
                 padding: $pad 0;
                 margin: $pad*2 0;
                 border-top: 1px solid;
@@ -84,7 +84,7 @@ body {
           aside {
             margin-top: $pad*5;
             
-            @include mobile {
+            @include tablet-and-below {
               margin-top: 0;
             }
             
@@ -113,7 +113,7 @@ body {
                 font-weight: 400;
               }
               
-              @include mobile {
+              @include tablet-and-below {
                 margin-left: 0;
               }
             }
@@ -142,7 +142,7 @@ body {
                   @include arrow;
                 }
                 
-                @include mobile {
+                @include tablet-and-below {
                   padding-left: 0;
                 }
               }
@@ -185,7 +185,7 @@ body {
                   }
                 }
                 
-                @include mobile {
+                @include tablet-and-below {
                   position: relative;
                   width: 100%;
                   height: auto;
@@ -230,7 +230,7 @@ body {
         &:nth-child(3), &:nth-child(4), &:nth-child(5) {
           article {
             header {
-              @include mobile {
+              @include tablet-and-below {
                 display: none;
               }
             }
@@ -243,7 +243,7 @@ body {
                 }
                 
                 
-                @include mobile {
+                @include tablet-and-below {
                   @include block;
                   position: relative;
                   top: 0;
@@ -263,7 +263,7 @@ body {
                   left: 5%;
                 }
                 
-                @include mobile {
+                @include tablet-and-below {
                   position: relative;
                   top: 0;
                   float: left;
@@ -292,6 +292,10 @@ body {
       }
       
       @include a4 {
+        display: none;
+      }
+      
+      @include tablet-and-below {
         display: none;
       }
     }
