@@ -112,7 +112,7 @@ body a:hover { color: #363636; text-decoration: underline; }
 body .container #header hgroup { padding: 1.25em 0; }
 body .container #header hgroup h1 { font-family: 'league-gothic', sans-serif; font-weight: normal; text-transform: uppercase; font-size: 2.5em; /* 40px */ cursor: pointer; color: #363636; text-decoration: none; padding: 0; }
 body .container #header hgroup h1:hover { color: #990000; }
-body .container #content section { background-image: url(http://metamn.github.io/ttf/assets/background.png); }
+body .container #content section { background-image: url(/assets/background.png); }
 body .container #content section article h2 span { cursor: pointer; color: #990000; text-decoration: none; }
 body .container #content section article h2 span:hover { color: #363636; text-decoration: underline; }
 body .container #content section article header h1 { padding-bottom: 0; padding-top: 3.4375em; }
