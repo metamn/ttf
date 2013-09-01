@@ -55,7 +55,7 @@ body .container { /* Headings -----------------------------------------------
 */ }
 body .container h1, body .container h2 { font-size: 1.5em; padding: 1.25em 0; margin-top: 0; margin-bottom: 0; }
 body .container h2 { font-size: 1.25em; }
-@media only screen and (min-width: 1401px) { body .container h2 { font-size: 1.5em; } }
+@media only screen and (min-width: 1442px) { body .container h2 { font-size: 1.5em; } }
 body .container p + p { margin-top: 1.25em; }
 body .container q, body .container blockquote { display: block; margin: 2.5em; border-left: 1px dotted; padding-left: 1.25em; font-style: italic; font-size: larger; }
 body .container address { font-variant: small-caps; }
@@ -123,7 +123,7 @@ body .container #content section article aside { margin-top: 6.25em; }
 @media only screen and (max-width: 767px) { body .container #content section article aside { margin-top: 0; } }
 body .container #content section article aside h1 { padding-top: 0; font-size: 200%; }
 body .container #content section article aside h1 span { font-size: 200%; }
-@media only screen and (min-width: 1401px) { body .container #content section article aside h1 { font-size: 300%; } }
+@media only screen and (min-width: 1442px) { body .container #content section article aside h1 { font-size: 300%; } }
 body .container #content section article aside p { font-size: large; max-width: 600px; line-height: 1.75; margin-left: 6em; float: left; }
 body .container #content section article aside p:first-line { font-weight: 400; }
 @media only screen and (max-width: 767px) { body .container #content section article aside p { margin-left: 0; } }
